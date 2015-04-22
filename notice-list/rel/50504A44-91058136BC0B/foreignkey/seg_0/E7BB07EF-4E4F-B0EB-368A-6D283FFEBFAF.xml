@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E7BB07EF-4E4F-B0EB-368A-6D283FFEBFAF" name="mailing_list_division_FK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<generatorID>9431AC1F-6B61-CB2D-134C-906304A0472C</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<containerWithKeyObject>21956D51-460E-7F61-801F-4147DF346634</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>7502E186-BDC1-F6F8-DA6D-0A0C5912D347</localFKIndex>
+<keyObject>1AE97758-E608-C61F-3290-9DD367028940</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

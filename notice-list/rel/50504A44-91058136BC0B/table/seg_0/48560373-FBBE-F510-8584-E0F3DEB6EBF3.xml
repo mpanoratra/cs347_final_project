@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="48560373-FBBE-F510-8584-E0F3DEB6EBF3" name="mailing_list_sublist">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="parent_mailing_list_id" id="0C75E7C5-BA1B-C4EB-7E24-7A984F7A4027">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>AEF2C39A-CB28-45A3-C2B8-E92AA4C99CC2</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89603B47-288D-CCFF-9736-D63191CAF334" referredColumn="AEF2C39A-CB28-45A3-C2B8-E92AA4C99CC2"/>
+</associations>
+</Column>
+<Column name="child_mailing_list_id" id="5FF03150-847C-676C-A883-B071E3C1843C">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>AEF2C39A-CB28-45A3-C2B8-E92AA4C99CC2</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D31B4B1-0D0E-07A3-7E1B-4649B1C56465" referredColumn="AEF2C39A-CB28-45A3-C2B8-E92AA4C99CC2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44879534-C1B8-1DED-E69A-CB1A89FA32CA" name="r4_PK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C75E7C5-BA1B-C4EB-7E24-7A984F7A4027"/>
+<colUsage columnID="5FF03150-847C-676C-A883-B071E3C1843C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04529401-3C4D-1E6C-27D1-9F8DC21E4855" name="FK_ASS_5">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<generatorID>2D361B15-FD14-0A2A-D1A9-1D6655FC4425</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C75E7C5-BA1B-C4EB-7E24-7A984F7A4027"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FBAF753D-8B9A-A088-0F14-15252F15F75F" name="FK_ASS_6">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<generatorID>2D361B15-FD14-0A2A-D1A9-1D6655FC4425</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FF03150-847C-676C-A883-B071E3C1843C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A48D6D5D-96F2-0CA9-F9AA-D8A684B80003" name="employee">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-03-30 17:05:11 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="employee_id" id="BCAE14D3-5971-906E-4B26-A937460B1B94">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-03-30 17:05:31 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="employee_name" id="1B1A4140-8112-273B-56F5-BAE9F220471A">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-03-30 17:05:40 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="status" id="416CB7B5-9390-599D-802A-B917BB974808">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-03-30 17:06:28 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="status_effective_date" id="38A0E371-A0CA-111E-B55F-D00BA5223A75">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-03-30 17:06:48 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Attribute>
+<Attribute name="division_id" id="CB5B36C0-05DD-90C7-68FE-FCC99C50FCCB">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:19:01 UTC</createdTime>
+<generatorID>9AADFD10-E874-CE78-1B96-845D7CA48058</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<referedAttribute>47F9C4C2-BD4B-85A8-0359-F7F08B7BC923</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="lab_id" id="D6DC3E9B-4977-45D9-EFD2-D51E5AB5D110">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:19:30 UTC</createdTime>
+<generatorID>095B0A5D-6594-A7CB-288C-2CD989421D09</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<referedAttribute>3241045C-D7E9-9706-9C21-5389C39BE9C9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2C05E4B3-F36E-83A8-E3CA-987DAFAE2767" name="{entity} PK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-03-30 17:05:38 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="50504A44-30BC-B7B0-6EAF-91058136BC0B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BCAE14D3-5971-906E-4B26-A937460B1B94</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2013622-F880-A08B-5E65-DEE004707C7F" name="employee_role">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="employee_id" id="6719B6CF-1F59-3168-4A11-2C81FEAF3701">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>CC8E46C5-840D-CD75-BF9A-1C1C6796889C</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="721082E7-7380-B03A-8700-0E54EF8A3775" referredColumn="CC8E46C5-840D-CD75-BF9A-1C1C6796889C"/>
+</associations>
+</Column>
+<Column name="role_id" id="95BFF035-FF7F-AA93-8BB5-64B4E5CC3033">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>9D841EA8-2ED7-FC06-B20F-3A374F2D851E</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F4457FD9-CA38-9F55-C096-230AE4FA358C" referredColumn="9D841EA8-2ED7-FC06-B20F-3A374F2D851E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="31333B4B-6EE5-F534-6AF4-C3DE9CD75763" name="r6_PK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6719B6CF-1F59-3168-4A11-2C81FEAF3701"/>
+<colUsage columnID="95BFF035-FF7F-AA93-8BB5-64B4E5CC3033"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA12B631-3767-5F31-54AB-ACAE5BE107AD" name="FK_ASS_8">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<generatorID>25A05EB1-E380-0856-7D26-12CA0D3CA9B9</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6719B6CF-1F59-3168-4A11-2C81FEAF3701"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04756084-6003-E31D-35CC-9D86700C5D17" name="FK_ASS_9">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-20 21:20:04 UTC</createdTime>
+<generatorID>25A05EB1-E380-0856-7D26-12CA0D3CA9B9</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95BFF035-FF7F-AA93-8BB5-64B4E5CC3033"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
