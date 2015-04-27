@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="attempt1_ddl1_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="201B78D9-F297-7C67-8964-75C16C9CC17D">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT011</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_3500" id="281AC928-A287-4FA5-D918-6DE24ED66174">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>3500</dataTypeSize>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="3840DCC5-57FC-A2BC-8618-CCA9EC5A5210">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>50</dataTypeSize>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_512" id="5221D4CB-B598-F4C8-A2A9-9702165ECCE9">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>512</dataTypeSize>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_1" id="7D956B6B-BEAB-B73B-6E5E-8FCFBE86B662">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>1</dataTypeSize>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT025</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_200" id="814B376D-BA5F-2A02-D26F-9E3D307E6339">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>200</dataTypeSize>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255" id="924D5756-E6DA-AE2A-F09A-1CD6B6CDA9C7">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>255</dataTypeSize>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="CC2806D0-E9FA-C917-E3CA-392E580E0025">
+         <createdBy>tsmith</createdBy>
+         <createdTime>2015-04-24 03:39:23 UTC</createdTime>
+         <ownerDesignName>notice-list</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>attempt1_ddl1_Domains</fileName>
+         <logicalDatatype>LOGDT007</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

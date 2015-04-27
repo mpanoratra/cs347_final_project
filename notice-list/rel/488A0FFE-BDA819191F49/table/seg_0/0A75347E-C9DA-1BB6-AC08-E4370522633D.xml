@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A75347E-C9DA-1BB6-AC08-E4370522633D" name="list_membership">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>71AD7A87-56F7-A157-DE4D-E0A0D2C9D58E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="mailing_list_id" id="119846EA-EF98-B4D6-C7D6-E7C7FF12613D">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>323D4978-A85A-6CAB-52E0-FDB9B118AC25</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>201B78D9-F297-7C67-8964-75C16C9CC17D</domain>
+<delegate>BDF4E5FC-AC48-20FC-FF12-F6C00C0C4AED</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98A54A46-A2C8-1190-2119-FD5C91A360C9" referredColumn="BDF4E5FC-AC48-20FC-FF12-F6C00C0C4AED"/>
+</associations>
+</Column>
+<Column name="employee_id" id="9CEEA9A5-FC0E-A2B6-FA27-A5E37F911D39">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>2C0CA2F8-10AA-40B7-E41A-78A3907FD074</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>201B78D9-F297-7C67-8964-75C16C9CC17D</domain>
+<delegate>DF2A4599-D187-0297-1958-B744B76B033A</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48F8A4E2-AFD6-5828-343F-28D7C439A1F2" referredColumn="DF2A4599-D187-0297-1958-B744B76B033A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B82F3E8E-B10A-4275-42EE-04B3444CEF60" name="r3_PK">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>2E783F6A-827C-A03F-E7FA-0B816A8E3302</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="119846EA-EF98-B4D6-C7D6-E7C7FF12613D"/>
+<colUsage columnID="9CEEA9A5-FC0E-A2B6-FA27-A5E37F911D39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F5C5218-10FB-2649-B72A-78F157D4B9D5" name="FK_ASS_3">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="119846EA-EF98-B4D6-C7D6-E7C7FF12613D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A473882-0BFE-B5E7-5F61-B69358A0BB86" name="FK_ASS_4">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CEEA9A5-FC0E-A2B6-FA27-A5E37F911D39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="mailing_list_sublist" directorySegmentName="seg_0" id="0B1EC386-EB69-C561-4BA7-0E8DD22B5B43">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="parent_mailing_list_id" id="9C7E7973-72E1-0365-E4D4-F9687820E8D4">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="child_mailing_list_id" id="E511C4CD-474D-0D8F-9465-CEB6B7826C51">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ASS_5" id="5A0AB21E-A0E3-D389-CCC4-ED34150AF6FE">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ASS_6" id="B0944CF3-AC23-73AA-3414-44804E25E5A9">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="r4_PK" id="ABBF4E4E-F586-072F-D4E6-6AB1850FBFEE">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

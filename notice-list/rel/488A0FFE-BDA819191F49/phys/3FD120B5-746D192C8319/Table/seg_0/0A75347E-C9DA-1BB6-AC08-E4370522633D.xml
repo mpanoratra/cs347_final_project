@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="list_membership" directorySegmentName="seg_0" id="0A75347E-C9DA-1BB6-AC08-E4370522633D">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="mailing_list_id" id="119846EA-EF98-B4D6-C7D6-E7C7FF12613D">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="employee_id" id="9CEEA9A5-FC0E-A2B6-FA27-A5E37F911D39">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ASS_4" id="0A473882-0BFE-B5E7-5F61-B69358A0BB86">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ASS_3" id="1F5C5218-10FB-2649-B72A-78F157D4B9D5">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="r3_PK" id="B82F3E8E-B10A-4275-42EE-04B3444CEF60">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -5,4 +5,9 @@
 <ownerDesignName>notice-list</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>77FFE91D-2915-285A-1071-F16DEFBA398E</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="84BA2532-93DA-5128-EA42-BBEA3E489773">
+<designStoragePath>/attempt1_ddl1</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

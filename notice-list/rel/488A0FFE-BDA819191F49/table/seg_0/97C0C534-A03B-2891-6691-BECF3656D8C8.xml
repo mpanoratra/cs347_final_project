@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="97C0C534-A03B-2891-6691-BECF3656D8C8" name="mailing_list">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>DC9808DF-6A1C-3A55-B6E4-DC7B61BBC8CE</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="list_id" id="BDF4E5FC-AC48-20FC-FF12-F6C00C0C4AED">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>BDEA3927-DA76-1A70-FCC6-80F19B4F3DCA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>201B78D9-F297-7C67-8964-75C16C9CC17D</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="70F10CFB-64DF-FE42-377F-CA532C840F10">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>56BBCE17-A31C-8DEF-D8CA-5B1C2CAB13B8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>924D5756-E6DA-AE2A-F09A-1CD6B6CDA9C7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="8028E5AA-E3AC-E221-5B9B-E7C34C788355">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>CF46B8C8-BC3C-0A83-CF6E-D06F55C50A01</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>281AC928-A287-4FA5-D918-6DE24ED66174</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="external_view_name" id="4FB84492-B7CE-908C-7E39-927E6E535C8D">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>58195F1F-7743-E7A0-36DD-7B2462B60AA1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3840DCC5-57FC-A2BC-8618-CCA9EC5A5210</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="5AD41943-DE95-E320-A46A-E7E952B218C7">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>C52A426E-5C42-2C5A-C8EF-E2CEA73BCB06</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>7D956B6B-BEAB-B73B-6E5E-8FCFBE86B662</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_effective_date" id="859B8AED-0030-FE7F-C9C1-3B873534113C">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>BBF041D5-9A01-55CC-0CAE-4410F6F94A0C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CC2806D0-E9FA-C917-E3CA-392E580E0025</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="division_id" id="42D74029-F961-B00B-923F-895C02C903F6">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>6EDBBE3D-C2DB-2A36-A1FB-2D1FE9B2E050</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>201B78D9-F297-7C67-8964-75C16C9CC17D</domain>
+<delegate>8BEA35BF-909C-47B1-73AB-9055757FF33B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85CC7ABC-BEA3-5D31-13D4-2BE9DBEE3193" referredColumn="8BEA35BF-909C-47B1-73AB-9055757FF33B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AADBFC1F-5481-424F-F315-D1E830B8F758" name="mailing_list_PK">
+<sourceDDLFile>attempt1_ddl1.ddl</sourceDDLFile>
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<importedID>C54EE6DA-4DE3-E7BA-889B-5C034EA6D867</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDF4E5FC-AC48-20FC-FF12-F6C00C0C4AED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16020548-62A5-D347-41EA-20D0A7CEF13C" name="mailing_list_division_FK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-24 03:39:23 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42D74029-F961-B00B-923F-895C02C903F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
