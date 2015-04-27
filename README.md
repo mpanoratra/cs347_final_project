@@ -33,7 +33,7 @@ Uncompress the package and open the folder `CS347_final_project`.
 
 1. Login to [Oracle Application Express](https://apex.oracle.com)
 2. Click the `Application Builder` dropdown menu from the top toolbar and select `import`.
-3. Under `Import file` click `choose file`, navigate to the `CS347_final_project` folder, and choose the file `f93644.sql`.
+3. Under `Import file` click `choose file`, navigate to the `CS347_final_project` folder, and choose the .sql file in the folder.
 4. Click `Next`.
 5. Click `Next` again.
 6. Click `Install Application`.
