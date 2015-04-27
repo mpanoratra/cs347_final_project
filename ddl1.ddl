@@ -36,7 +36,7 @@ CREATE TABLE employee
   (
     employee_id           INTEGER NOT NULL ,
     employee_name         VARCHAR2 (255) ,
-    status                CHAR (1) ,
+    status                VARCHAR2 (1) DEFAULT 'T' ,
     status_effective_date DATE ,
     division_id           INTEGER NOT NULL ,
     lab_id                INTEGER NOT NULL ,
