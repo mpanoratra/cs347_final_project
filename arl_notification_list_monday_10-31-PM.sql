@@ -27,7 +27,7 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     93644
 --   Name:            ARL_Notification_Lists
---   Date and Time:   02:50 Tuesday April 28, 2015
+--   Date and Time:   03:30 Tuesday April 28, 2015
 --   Exported By:     DANIELKLEIN@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -36,10 +36,10 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 --
 
 -- Application Statistics:
---   Pages:                     15
---     Items:                   25
+--   Pages:                     16
+--     Items:                   26
 --     Processes:               23
---     Regions:                 18
+--     Regions:                 20
 --     Buttons:                 36
 --     Dynamic Actions:          5
 --   Shared Components:
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150428024927'
+,p_last_upd_yyyymmddhh24miss=>'20150428032957'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -7853,7 +7853,36 @@ wwv_flow_api.create_page(
 ,p_page_is_public_y_n=>'N'
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
-,p_last_upd_yyyymmddhh24miss=>'20150421021252'
+,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150428032836'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(-43218185007382082)
+,p_plug_name=>'Home'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(3088428818157156240)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(2163844069360540)
+,p_plug_name=>'Search'
+,p_parent_plug_id=>wwv_flow_api.id(-43218185007382082)
+,p_region_template_options=>'#DEFAULT#'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(3088405045457155926)
+,p_plug_display_sequence=>20
+,p_include_in_reg_disp_sel_yn=>'N'
+,p_plug_display_point=>'BODY'
+,p_plug_query_row_template=>1
+,p_plug_query_num_rows=>15
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+,p_attribute_03=>'Y'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3088516746941159220)
@@ -7868,6 +7897,27 @@ wwv_flow_api.create_page_plug(
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>wwv_flow_api.id(3088509867009159002)
 ,p_plug_query_row_template=>1
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(2454252690412181)
+,p_name=>'P1_SEARCH'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(2163844069360540)
+,p_prompt=>'Search'
+,p_placeholder=>'Search All...'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_cMaxlength=>50
+,p_cHeight=>1
+,p_label_alignment=>'RIGHT'
+,p_field_alignment=>'LEFT-CENTER'
+,p_field_template=>wwv_flow_api.id(3088481411892158294)
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs:t-Form-fieldContainer--xlarge'
+,p_lov_display_extra=>'YES'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
 );
 end;
 /
@@ -8233,6 +8283,27 @@ wwv_flow_api.create_page_process(
 ,p_attribute_01=>'CLEAR_CACHE_CURRENT_PAGE'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_api.id(3207008163064220235)
+);
+end;
+/
+prompt --application/pages/page_00004
+begin
+wwv_flow_api.create_page(
+ p_id=>4
+,p_user_interface_id=>wwv_flow_api.id(3088514766268159174)
+,p_name=>'Search Results'
+,p_page_mode=>'NORMAL'
+,p_step_title=>'Search Results'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_first_item=>'NO_FIRST_ITEM'
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_chained=>'Y'
+,p_overwrite_navigation_list=>'N'
+,p_page_is_public_y_n=>'N'
+,p_cache_mode=>'NOCACHE'
+,p_help_text=>'No help is available for this page.'
+,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150428032957'
 );
 end;
 /
