@@ -27,7 +27,7 @@ prompt APPLICATION 14305 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     14305
 --   Name:            ARL_Notification_Lists
---   Date and Time:   17:42 Wednesday April 29, 2015
+--   Date and Time:   17:51 Wednesday April 29, 2015
 --   Exported By:     SMITHLEET@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429174212'
+,p_last_upd_yyyymmddhh24miss=>'20150429175108'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -11912,7 +11912,7 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429174212'
+,p_last_upd_yyyymmddhh24miss=>'20150429175108'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(7113316509518538268)
@@ -12073,6 +12073,19 @@ wwv_flow_api.create_page_process(
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
 ,p_process_name=>'Save membership'
+,p_process_sql_clob=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
+'DECLARE',
+'    TYPE t_num IS TABLE OF employee.employee_id%TYPE;',
+'    new_emp_vc_arr apex_application_global.vc_arr2;',
+'BEGIN',
+'    new_emp_vc_arr := APEX_UTIL.STRING_TO_TABLE(:P16_SHUTTLE);',
+'    DELETE FROM list_membership WHERE notice_list_id = :P16_NOTICE_LIST_ID;',
+'    FOR i in new_emp_vc_arr.FIRST..new_emp_vc_arr.LAST LOOP',
+'        INSERT INTO list_membership (employee_id, notice_list_id)',
+'        VALUES (TO_NUMBER(new_emp_vc_arr(i)), TO_NUMBER(:P16_NOTICE_LIST_ID));',
+'    END LOOP;',
+'    ',
+'END;'))
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_api.create_page_process(
