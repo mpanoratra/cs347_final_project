@@ -27,7 +27,7 @@ prompt APPLICATION 14305 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     14305
 --   Name:            ARL_Notification_Lists
---   Date and Time:   17:57 Wednesday April 29, 2015
+--   Date and Time:   18:17 Wednesday April 29, 2015
 --   Exported By:     SMITHLEET@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429175628'
+,p_last_upd_yyyymmddhh24miss=>'20150429181016'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -11798,7 +11798,7 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429021517'
+,p_last_upd_yyyymmddhh24miss=>'20150429181016'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(7113423522586539410)
@@ -11831,7 +11831,7 @@ wwv_flow_api.create_worksheet(
 ,p_pagination_type=>'ROWS_X_TO_Y'
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'TABS'
-,p_show_detail_link=>'C'
+,p_show_detail_link=>'N'
 ,p_show_calendar=>'N'
 ,p_download_formats=>'CSV:HTML:EMAIL:XLS:PDF:RTF'
 ,p_detail_link=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::P16_ROWID:#ROWID#'
@@ -11865,7 +11865,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_db_column_name=>'NAME'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
-,p_column_label=>'Name'
+,p_column_label=>'List Name'
 ,p_column_type=>'STRING'
 ,p_tz_dependent=>'N'
 );
