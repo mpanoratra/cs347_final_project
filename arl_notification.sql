@@ -27,8 +27,13 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     93644
 --   Name:            ARL_Notification_Lists
+<<<<<<< HEAD
+--   Date and Time:   10:30 Wednesday April 29, 2015
+--   Exported By:     DANIELKLEIN@UTEXAS.EDU
+=======
 --   Date and Time:   04:51 Wednesday April 29, 2015
 --   Exported By:     SMITHLEET@UTEXAS.EDU
+>>>>>>> d964d7a01a48dcfc4f81154e34117c667f8d2621
 --   Flashback:       0
 --   Export Type:     Application Export
 --   Version:         5.0.0.00.31
@@ -109,8 +114,13 @@ wwv_flow_api.create_flow(
 ,p_browser_frame=>'D'
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
+<<<<<<< HEAD
+,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150429102954'
+=======
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
 ,p_last_upd_yyyymmddhh24miss=>'20150429045043'
+>>>>>>> d964d7a01a48dcfc4f81154e34117c667f8d2621
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -10236,8 +10246,8 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
-,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429020819'
+,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150429102954'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3265586531998941961)
@@ -10334,7 +10344,7 @@ wwv_flow_api.create_page_item(
 '	person_count pls_integer;',
 'begin',
 '	apex_collection.create_or_truncate_collection(p_collection_name => ''P16COL'');',
-'	tab := apex_util.string_to_table(:P16_EMPLOYEE_ID);',
+'	tab := apex_util.string_to_table(:EMPLOYEE_LIST);',
 '',
 '	FOR i IN 1 .. tab.count LOOP',
 '		APEX_COLLECTION.ADD_MEMBER(',
@@ -10342,16 +10352,16 @@ wwv_flow_api.create_page_item(
 '			p_c001 => tab(i));',
 '	END LOOP;',
 '',
-'	INSERT INTO list_membership (mailing_list_id, employee_id)',
-'		SELECT c001, :P16_MAILING_LIST_ID',
+'	INSERT INTO list_membership (notice_list_id, employee_id)',
+'		SELECT c001, :NOTICE_LIST_LIST',
 '		FROM apex_collections',
 '		WHERE collection_name = ''P16COL'' AND',
 '			NOT EXISTS (SELECT 1 FROM list_membership l ',
 '						WHERE l.employee_id = c001 ',
-'						AND l.mailing_list_id = :P16_MAILING_LIST_ID);',
+'						AND l.notice_list_id = :NOTICE_LIST_LIST);',
 '',
 '	DELETE FROM list_membership WHERE',
-'		mailing_list_id = :P16_MAILING_LIST_ID AND',
+'		notice_list_id = :NOTICE_LIST_LIST AND',
 '		NOT EXISTS (SELECT 1 FROM apex_collections',
 '					WHERE collection_name = ''P16COL''',
 '					AND c001 = employee_id);',
@@ -10360,9 +10370,11 @@ wwv_flow_api.create_page_item(
 ,p_display_as=>'NATIVE_SHUTTLE'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'SELECT e.employee_name AS name, e.employee_id AS id',
-'FROM employee e JOIN list_membership l',
-'ON e.employee_id = l.employee_id',
-'WHERE e.employee_id = l.employee_id',
+'FROM employee e JOIN list_membership l ',
+'                ON e.employee_id = l.employee_id ',
+'                JOIN notice_list n',
+'                ON l.notice_list_id = n.list_id',
+'WHERE l.notice_list_id = :NOTICE_LIST_LIST',
 'ORDER BY 1;'))
 ,p_cHeight=>5
 ,p_field_template=>wwv_flow_api.id(3088482559036158386)
