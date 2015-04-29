@@ -27,7 +27,7 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     93644
 --   Name:            ARL_Notification_Lists
---   Date and Time:   13:41 Wednesday April 29, 2015
+--   Date and Time:   14:20 Wednesday April 29, 2015
 --   Exported By:     DANIELKLEIN@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -36,10 +36,10 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 --
 
 -- Application Statistics:
---   Pages:                     20
+--   Pages:                     21
 --     Items:                   35
 --     Processes:               29
---     Regions:                 28
+--     Regions:                 29
 --     Buttons:                 48
 --     Dynamic Actions:          6
 --   Shared Components:
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429134046'
+,p_last_upd_yyyymmddhh24miss=>'20150429141854'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -169,7 +169,16 @@ wwv_flow_api.create_list_item(
 ,p_list_item_link_text=>'List Membership'
 ,p_list_item_link_target=>'f?p=&APP_ID.:15:&SESSION.::&DEBUG.'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
-,p_list_item_current_for_pages=>'15,16'
+,p_list_item_current_for_pages=>'15,16,7,8'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(5237229811581127)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>'List User Statistics'
+,p_list_item_link_target=>'f?p=&APP_ID.:8:&SESSION.::&DEBUG.'
+,p_parent_list_item_id=>wwv_flow_api.id(3265692838096942896)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'8'
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(3380739791643639687)
@@ -8830,6 +8839,86 @@ wwv_flow_api.create_page_process(
 ,p_attribute_01=>'CLEAR_CACHE_CURRENT_PAGE'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_api.id(3207558209162349582)
+);
+end;
+/
+prompt --application/pages/page_00008
+begin
+wwv_flow_api.create_page(
+ p_id=>8
+,p_user_interface_id=>wwv_flow_api.id(3088514766268159174)
+,p_name=>'List User Statistics'
+,p_page_mode=>'NORMAL'
+,p_step_title=>'List User Statistics'
+,p_step_sub_title=>'List User Statistics'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_first_item=>'NO_FIRST_ITEM'
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_chained=>'Y'
+,p_overwrite_navigation_list=>'N'
+,p_page_is_public_y_n=>'N'
+,p_cache_mode=>'NOCACHE'
+,p_help_text=>'No help is available for this page.'
+,p_last_updated_by=>'DANIELKLEIN@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150429141854'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(5237824550581129)
+,p_plug_name=>'List User Statistics'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(3088435719770156522)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'N'
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_FLASH_CHART5'
+,p_plug_query_row_template=>1
+);
+wwv_flow_api.create_flash_chart5(
+ p_id=>wwv_flow_api.id(5238205788581130)
+,p_default_chart_type=>'3DPie'
+,p_chart_title=>'List Membership'
+,p_chart_rendering=>'SVG_ONLY'
+,p_chart_name=>'chart_3832966839610621809'
+,p_chart_width=>700
+,p_chart_height=>500
+,p_display_attr=>'::N:V:X::N:::Y:None:::N:::Default:::S'
+,p_gantt_attr=>'Y:Rhomb:Rhomb:Full:Rhomb:Rhomb:Full:Rhomb:Rhomb:Full:30:15:5:Y:I:N:S:E'
+,p_pie_attr=>'Outside:::'
+,p_map_attr=>'Orthographic:RegionBounds:REGION_NAME:Y:Y:::::Y:N'
+, p_omit_label_interval=> null
+,p_bgtype=>'Trans'
+,p_color_scheme=>'6'
+,p_x_axis_label_font=>'Tahoma:10:#000000'
+,p_y_axis_label_font=>'Tahoma:10:#000000'
+, p_names_font=> null
+, p_names_rotation=> null
+,p_values_font=>'Tahoma:10:#000000'
+,p_hints_font=>'Tahoma:10:#000000'
+,p_legend_font=>'Tahoma:10:#000000'
+,p_grid_labels_font=>'Tahoma:10:#000000'
+,p_chart_title_font=>'Tahoma:14:#000000'
+,p_x_axis_title_font=>'Tahoma:14:#000000'
+,p_y_axis_title_font=>'Tahoma:14:#000000'
+,p_gauge_labels_font=>'Tahoma:10:#000000'
+);
+wwv_flow_api.create_flash_chart5_series(
+ p_id=>wwv_flow_api.id(5238659916581133)
+,p_chart_id=>wwv_flow_api.id(5238205788581130)
+,p_series_seq=>10
+,p_series_name=>'Series 1'
+,p_series_query=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
+'SELECT NULL LINK,',
+'       NL.NAME LABEL,',
+'       COUNT(LM.EMPLOYEE_ID) VALUE',
+'FROM  NOTICE_LIST NL JOIN LIST_MEMBERSHIP LM',
+'ON NL.LIST_ID = LM.NOTICE_LIST_ID',
+'GROUP BY NL.NAME',
+'ORDER  BY NL.NAME',
+''))
+,p_series_query_type=>'SQL_QUERY'
+,p_series_query_no_data_found=>'no data found'
+,p_series_query_row_count_max=>15
+,p_show_action_link=>'N'
 );
 end;
 /
