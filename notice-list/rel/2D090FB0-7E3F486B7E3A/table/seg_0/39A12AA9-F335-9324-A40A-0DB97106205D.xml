@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="39A12AA9-F335-9324-A40A-0DB97106205D" name="notice_list">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>82D19BCA-1CA9-CBCB-6CF4-E11EA7E1A46A</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="list_id" id="4FB48A48-CD16-F079-2A76-A681E683F8D7">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>D4F63E55-1D0A-1DBA-A152-FDAB45428964</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="D59F34F3-CB34-D2CE-DA8F-40A91EBBFAED">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>834CE867-1A31-70A9-F2B8-9B45F7FB2FC7</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="E0D3A4BC-C7AC-3B8B-473B-0FEAE1CFB428">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>F198488B-E4F0-FCDB-BB7F-F9E1A2091735</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3500</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="external_view_name" id="3FCCF725-72DD-2132-95D3-C81A19D7D4C2">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>0AD664CD-540E-1850-3E33-5EF7F8AE7F8A</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="DB06D5A7-4CC7-313A-8C51-86FDF6265298">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>26728233-3656-F0FA-EA73-7634D66F1E4C</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_effective_date" id="E34178D2-14BF-2290-71A7-DF160756ACCE">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>5642B6A1-7B6F-8A69-21FC-575F1D8F614A</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="division_division_id" id="8E9ED112-A98F-99C6-FCEA-FD5D7309B1B6">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>B7C4C27C-3318-8CBB-753A-6D316BF7CC92</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>F5315262-9347-39F3-07F0-F0CB8DB67F89</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B7BA85C2-D898-0B9D-883E-DEA21FF3FFA3" referredColumn="F5315262-9347-39F3-07F0-F0CB8DB67F89"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A4651C6-3193-6AA4-4B59-A23CCF663E57" name="notice_list_PK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>E2D1FE4A-1F62-04CA-0894-396C8D91B647</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FB48A48-CD16-F079-2A76-A681E683F8D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D022222C-2AE6-95B5-2808-C9F2C859816B" name="notice_list_division_FK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>9431AC1F-6B61-CB2D-134C-906304A0472C</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E9ED112-A98F-99C6-FCEA-FD5D7309B1B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

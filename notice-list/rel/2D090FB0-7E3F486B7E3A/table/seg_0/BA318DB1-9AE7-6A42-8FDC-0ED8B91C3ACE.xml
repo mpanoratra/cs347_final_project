@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA318DB1-9AE7-6A42-8FDC-0ED8B91C3ACE" name="lab">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>3C4295E2-ED4D-7B84-A9C3-88747F32AE94</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="lab_id" id="3DADAAD0-823A-A1C2-9E1E-7A42A43A2489">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>3241045C-D7E9-9706-9C21-5389C39BE9C9</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="BB61FFD7-131A-C94A-7A01-EAEFD080F78C">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>8C69C95D-818D-F4A3-8861-30E16ECCE65A</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF1CCDAD-8298-4FCA-4EFE-84030D45F493" name="lab_PK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>FACDE539-1BDD-7873-5B1B-3F17B8A96618</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DADAAD0-823A-A1C2-9E1E-7A42A43A2489"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

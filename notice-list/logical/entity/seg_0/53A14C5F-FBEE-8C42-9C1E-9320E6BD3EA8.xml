@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="82D19BCA-1CA9-CBCB-6CF4-E11EA7E1A46A" name="notice_list">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="53A14C5F-FBEE-8C42-9C1E-9320E6BD3EA8" name="document">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:09:37 UTC</createdTime>
+<createdTime>2015-04-29 00:33:13 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="list_id" id="D4F63E55-1D0A-1DBA-A152-FDAB45428964">
+<Attribute name="doc_id" id="5B9803A9-1F5D-0AF5-ADAC-6A0A96654C22">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:09:46 UTC</createdTime>
+<createdTime>2015-04-29 00:34:24 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
@@ -26,9 +26,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
-<Attribute name="name" id="834CE867-1A31-70A9-F2B8-9B45F7FB2FC7">
+<Attribute name="attach_mimetype" id="9A250837-617D-0D1C-27FA-03A64EBAB8FC">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:09:57 UTC</createdTime>
+<createdTime>2015-04-29 00:34:31 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
@@ -39,9 +39,9 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
 </Attribute>
-<Attribute name="description" id="F198488B-E4F0-FCDB-BB7F-F9E1A2091735">
+<Attribute name="attach_filename" id="73879B47-F08F-59D3-C9E2-090A4D3A96D3">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:10:29 UTC</createdTime>
+<createdTime>2015-04-29 00:34:51 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
@@ -50,11 +50,23 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>3500</dataTypeSize>
+<dataTypeSize>255</dataTypeSize>
 </Attribute>
-<Attribute name="external_view_name" id="0AD664CD-540E-1850-3E33-5EF7F8AE7F8A">
+<Attribute name="attach_last_update" id="00CC9450-5134-68D7-10D9-6A065A11569D">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:10:48 UTC</createdTime>
+<createdTime>2015-04-29 00:35:02 UTC</createdTime>
+<ownerDesignName>notice-list</ownerDesignName>
+<engineerTo>
+<item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="attach_charset" id="80EB7704-3746-E3E2-829E-9DCEE318DA51">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:35:29 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
@@ -63,11 +75,11 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
+<dataTypeSize>128</dataTypeSize>
 </Attribute>
-<Attribute name="status" id="26728233-3656-F0FA-EA73-7634D66F1E4C">
+<Attribute name="attach_file" id="06F49534-85E4-1952-CE15-0FEE98FB7918">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:11:04 UTC</createdTime>
+<createdTime>2015-04-29 00:35:42 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
@@ -75,46 +87,33 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
+<logicalDatatype>LOGDT029</logicalDatatype>
 </Attribute>
-<Attribute name="status_effective_date" id="5642B6A1-7B6F-8A69-21FC-575F1D8F614A">
+<Attribute name="lab_id" id="AA3C9186-F67C-C35F-B5AB-77034343DBE2">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:11:17 UTC</createdTime>
+<createdTime>2015-04-29 00:38:24 UTC</createdTime>
+<generatorID>BBE2C7CC-E0D5-920A-A02D-B9B33713D75A</generatorID>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-</Attribute>
-<Attribute name="division_id" id="B7C4C27C-3318-8CBB-753A-6D316BF7CC92">
-<createdBy>tsmith</createdBy>
-<createdTime>2015-04-20 21:19:13 UTC</createdTime>
-<generatorID>9431AC1F-6B61-CB2D-134C-906304A0472C</generatorID>
-<ownerDesignName>notice-list</ownerDesignName>
-<engineerTo>
-<item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
-</engineerTo>
-<referedAttribute>47F9C4C2-BD4B-85A8-0359-F7F08B7BC923</referedAttribute>
+<referedAttribute>3241045C-D7E9-9706-9C21-5389C39BE9C9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="E2D1FE4A-1F62-04CA-0894-396C8D91B647" name="{entity} PK">
+<identifier id="43A6CBF2-58C7-0D22-D406-089EC2AF927B" name="{entity} PK">
 <createdBy>tsmith</createdBy>
-<createdTime>2015-03-30 17:09:54 UTC</createdTime>
+<createdTime>2015-04-29 00:34:30 UTC</createdTime>
 <ownerDesignName>notice-list</ownerDesignName>
 <engineerTo>
 <item key="2D090FB0-50B7-FCF4-65A5-7E3F486B7E3A" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>D4F63E55-1D0A-1DBA-A152-FDAB45428964</attributeRef>
+<attributeRef>5B9803A9-1F5D-0AF5-ADAC-6A0A96654C22</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

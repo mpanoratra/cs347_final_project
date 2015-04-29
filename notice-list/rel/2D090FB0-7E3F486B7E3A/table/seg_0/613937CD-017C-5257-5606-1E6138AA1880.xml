@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="613937CD-017C-5257-5606-1E6138AA1880" name="role">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>FDCBEC96-D7CE-AE86-599D-11EFEB1A2532</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="601BA372-B5BA-8B0D-AF89-5AE9B2FB69EE">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>8162D76F-D0F0-96DA-D4FF-2A7969B868CB</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="914F853C-B765-2EE5-6E9C-DEFD2EEB933E">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>FF37616D-E7E2-FC62-033F-69E8B322724B</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61D4D4E5-6570-FDAB-0E48-5A409D8241CA" name="role_PK">
+<createdBy>tsmith</createdBy>
+<createdTime>2015-04-29 00:45:52 UTC</createdTime>
+<generatorID>2B44A5B0-126F-1A73-E79A-7C347343B903</generatorID>
+<ownerDesignName>notice-list</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="601BA372-B5BA-8B0D-AF89-5AE9B2FB69EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
