@@ -2,7 +2,7 @@ DECLARE
 	lab_ins lab%ROWTYPE;
 	div_ins division%ROWTYPE;
 	emp_ins employee%ROWTYPE;
-	list_ins mailing_list%ROWTYPE;
+	list_ins notice_list%ROWTYPE;
 	lm_ins list_membership%ROWTYPE;
 	lab_count INTEGER := 0;
 	div_count INTEGER := 0;
@@ -32,12 +32,12 @@ BEGIN
 		list_ins.external_view_name := 'external list name ' || div_count;
 		list_ins.division_id := div_cur.division_id;
 		list_ins.status := 'T';
-		INSERT INTO mailing_list VALUES list_ins;
+		INSERT INTO notice_list VALUES list_ins;
 		div_count := div_count + 1;
 	END LOOP;
 	FOR emp_cur IN (SELECT * FROM EMPLOYEE) LOOP
-		SELECT list_id INTO list_ins.list_id FROM (SELECT list_id, rownum as rn FROM mailing_list) WHERE rn = (MOD(emp_cur.employee_id, 4) + 1);
-		lm_ins.mailing_list_id := list_ins.list_id;
+		SELECT list_id INTO list_ins.list_id FROM (SELECT list_id, rownum as rn FROM notice_list) WHERE rn = (MOD(emp_cur.employee_id, 4) + 1);
+		lm_ins.notice_list_id := list_ins.list_id;
 		lm_ins.employee_id := emp_cur.employee_id;
 		INSERT INTO list_membership VALUES lm_ins;
 	END LOOP;

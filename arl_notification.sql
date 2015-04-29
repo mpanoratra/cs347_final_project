@@ -27,7 +27,7 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     93644
 --   Name:            ARL_Notification_Lists
---   Date and Time:   00:28 Wednesday April 29, 2015
+--   Date and Time:   02:32 Wednesday April 29, 2015
 --   Exported By:     SMITHLEET@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -41,7 +41,7 @@ prompt APPLICATION 93644 - ARL_Notification_Lists
 --     Processes:               25
 --     Regions:                 22
 --     Buttons:                 42
---     Dynamic Actions:          5
+--     Dynamic Actions:          3
 --   Shared Components:
 --     Logic:
 --       Processes:              1
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429002721'
+,p_last_upd_yyyymmddhh24miss=>'20150429022604'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -531,7 +531,7 @@ wwv_flow_api.create_list_of_values(
 ,p_lov_query=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'select name as d,',
 '       list_id as r',
-'  from mailing_list',
+'  from notice_list',
 ' order by 1'))
 );
 wwv_flow_api.create_list_of_values(
@@ -560,8 +560,8 @@ wwv_flow_api.create_list_of_values(
 ,p_lov_query=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'select name as d,',
 '       list_id as r',
-'  from mailing_list',
-'WHERE list_id != :P20_PARENT_MAILING_LIST_ID',
+'  from notice_list',
+'WHERE list_id != :P20_PARENT_LIST_ID',
 ' order by 1'))
 );
 end;
@@ -9502,8 +9502,8 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
-,p_last_updated_by=>'nobody'
-,p_last_upd_yyyymmddhh24miss=>'20150422213244'
+,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150429011943'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3264683291633752192)
@@ -9527,7 +9527,7 @@ wwv_flow_api.create_page_plug(
 '"ROW_VERSION_NUMBER",',
 '"UPDATED",',
 '"UPDATED_BY"',
-'from "#OWNER#"."MAILING_LIST" ',
+'from "#OWNER#"."NOTICE_LIST" ',
 '  ',
 ''))
 ,p_plug_source_type=>'NATIVE_IR'
@@ -9749,9 +9749,9 @@ begin
 wwv_flow_api.create_page(
  p_id=>14
 ,p_user_interface_id=>wwv_flow_api.id(3088514766268159174)
-,p_name=>'Form on MAILING_LIST'
+,p_name=>'Form on Notice List'
 ,p_page_mode=>'MODAL'
-,p_step_title=>'Form on MAILING_LIST'
+,p_step_title=>'Form on Notice List'
 ,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
 ,p_first_item=>'NO_FIRST_ITEM'
 ,p_javascript_code=>'var htmldb_delete_message=''"DELETE_CONFIRM_MSG"'';'
@@ -9764,11 +9764,11 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429002415'
+,p_last_upd_yyyymmddhh24miss=>'20150429011812'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3264673942215751323)
-,p_plug_name=>'Form on MAILING_LIST'
+,p_plug_name=>'Form on Notice List'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_api.id(3088405045457155926)
 ,p_plug_display_sequence=>10
@@ -10032,19 +10032,18 @@ wwv_flow_api.create_page_process(
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_HEADER'
 ,p_process_type=>'NATIVE_FORM_FETCH'
-,p_process_name=>'Fetch Row from MAILING_LIST'
-,p_attribute_02=>'MAILING_LIST'
+,p_process_name=>'Fetch Row from NOTICE_LIST'
+,p_attribute_02=>'NOTICE_LIST'
 ,p_attribute_03=>'P14_ROWID'
 ,p_attribute_04=>'ROWID'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_api.create_page_process(
  p_id=>wwv_flow_api.id(3264681058203752004)
 ,p_process_sequence=>30
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_FORM_PROCESS'
-,p_process_name=>'Process Row of MAILING_LIST'
-,p_attribute_02=>'MAILING_LIST'
+,p_process_name=>'Process Row of NOTICE_LIST'
+,p_attribute_02=>'NOTICE_LIST'
 ,p_attribute_03=>'P14_ROWID'
 ,p_attribute_04=>'ROWID'
 ,p_attribute_11=>'I:U:D'
@@ -10090,8 +10089,8 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
-,p_last_updated_by=>'nobody'
-,p_last_upd_yyyymmddhh24miss=>'20150422221818'
+,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150429021517'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3265693545066943103)
@@ -10102,10 +10101,12 @@ wwv_flow_api.create_page_plug(
 ,p_include_in_reg_disp_sel_yn=>'N'
 ,p_plug_display_point=>'BODY'
 ,p_plug_source=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'select "ROWID", ',
-'"MAILING_LIST_ID",',
-'"EMPLOYEE_ID"',
-'from "#OWNER#"."LIST_MEMBERSHIP" ',
+'SELECT lm.rowid,',
+'nl.name,',
+'e.employee_name',
+'FROM list_membership lm',
+'INNER JOIN notice_list nl ON nl.list_id = lm.notice_list_id',
+'INNER JOIN employee e ON e.employee_id = lm.employee_id',
 '  ',
 ''))
 ,p_plug_source_type=>'NATIVE_IR'
@@ -10117,14 +10118,17 @@ wwv_flow_api.create_worksheet(
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
+,p_allow_report_categories=>'N'
 ,p_show_nulls_as=>'-'
 ,p_pagination_type=>'ROWS_X_TO_Y'
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'TABS'
 ,p_show_detail_link=>'C'
+,p_show_calendar=>'N'
 ,p_download_formats=>'CSV:HTML:EMAIL:XLS:PDF:RTF'
-,p_detail_link=>'f?p=&APP_ID.:16:&APP_SESSION.::::P16_ROWID:#ROWID#'
+,p_detail_link=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::P16_ROWID:#ROWID#'
 ,p_detail_link_text=>'<img src="#IMAGE_PREFIX#menu/pencil16x16.gif"  border="0">'
+,p_icon_view_columns_per_row=>1
 ,p_owner=>'SMITHLEET@UTEXAS.EDU'
 ,p_internal_uid=>3265693864675943105
 );
@@ -10149,21 +10153,21 @@ wwv_flow_api.create_worksheet_column(
 ,p_rpt_show_filter_lov=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(3265694397568943118)
-,p_db_column_name=>'MAILING_LIST_ID'
+ p_id=>wwv_flow_api.id(3793329804570283164)
+,p_db_column_name=>'NAME'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
-,p_column_label=>'Mailing List Id'
-,p_column_type=>'NUMBER'
+,p_column_label=>'Name'
+,p_column_type=>'STRING'
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(3265694789995943119)
-,p_db_column_name=>'EMPLOYEE_ID'
+ p_id=>wwv_flow_api.id(3793330573506283165)
+,p_db_column_name=>'EMPLOYEE_NAME'
 ,p_display_order=>3
 ,p_column_identifier=>'C'
-,p_column_label=>'Employee Id'
-,p_column_type=>'NUMBER'
+,p_column_label=>'Employee Name'
+,p_column_type=>'STRING'
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_rpt(
@@ -10174,7 +10178,7 @@ wwv_flow_api.create_worksheet_rpt(
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
 ,p_display_rows=>50
-,p_report_columns=>'ROWID:MAILING_LIST_ID:EMPLOYEE_ID'
+,p_report_columns=>'ROWID:NAME:EMPLOYEE_NAME'
 ,p_flashback_enabled=>'N'
 );
 wwv_flow_api.create_page_button(
@@ -10212,7 +10216,7 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429002452'
+,p_last_upd_yyyymmddhh24miss=>'20150429020819'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3265586531998941961)
@@ -10363,20 +10367,20 @@ wwv_flow_api.create_page_item(
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(3265689680035942865)
-,p_name=>'P16_MAILING_LIST_ID'
+,p_name=>'P16_NOTICE_LIST_ID'
 ,p_is_required=>true
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_api.id(3265586531998941961)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Notice List'
-,p_source=>'MAILING_LIST_ID'
+,p_source=>'NOTICE_LIST_ID'
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'NOTICE_LIST_LIST'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'select name as d,',
 '       list_id as r',
-'  from mailing_list',
+'  from notice_list',
 ' order by 1'))
 ,p_cSize=>32
 ,p_cMaxlength=>255
@@ -10442,7 +10446,7 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150428050714'
+,p_last_upd_yyyymmddhh24miss=>'20150429021927'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3380740187929639700)
@@ -10453,15 +10457,15 @@ wwv_flow_api.create_page_plug(
 ,p_include_in_reg_disp_sel_yn=>'N'
 ,p_plug_display_point=>'BODY'
 ,p_plug_source=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'SELECT ml.name FROM list_membership lm',
-'	INNER JOIN mailing_list ml ',
-'	ON lm.mailing_list_id = ml.list_id',
+'SELECT nl.name FROM list_membership lm',
+'	INNER JOIN notice_list nl ',
+'	ON lm.notice_list_id = nl.list_id',
 '	WHERE lm.employee_id = :PARAM_EMPLOYEE_ID',
 'UNION',
-'SELECT ml2.name FROM mailing_list_sublist mls',
-'	INNER JOIN mailing_list ml2 ON mls.parent_mailing_list_id = ml2.list_id',
-'	CONNECT BY PRIOR mls.parent_mailing_list_id = mls.child_mailing_list_id',
-'	START WITH mls.child_mailing_list_id = (SELECT mailing_list_id FROM list_membership WHERE employee_id = :PARAM_EMPLOYEE_ID)'))
+'SELECT nl2.name FROM sublist s',
+'	INNER JOIN notice_list nl2 ON s.parent_list_id = nl2.list_id',
+'	CONNECT BY PRIOR s.parent_list_id = s.child_list_id',
+'	START WITH s.child_list_id = (SELECT notice_list_id FROM list_membership WHERE employee_id = :PARAM_EMPLOYEE_ID)'))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_plug_query_row_template=>1
 );
@@ -10471,12 +10475,20 @@ wwv_flow_api.create_worksheet(
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
+,p_allow_report_categories=>'N'
 ,p_show_nulls_as=>'-'
 ,p_pagination_type=>'ROWS_X_TO_Y'
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'TABS'
 ,p_show_detail_link=>'N'
+,p_show_select_columns=>'N'
+,p_show_computation=>'N'
+,p_show_pivot=>'N'
+,p_show_calendar=>'N'
+,p_show_flashback=>'N'
 ,p_download_formats=>'CSV:HTML:EMAIL:XLS:PDF:RTF'
+,p_detail_link_text=>'<img src="#IMAGE_PREFIX#menu/pencil16x16.gif" alt="" />'
+,p_icon_view_columns_per_row=>1
 ,p_owner=>'SMITHLEET@UTEXAS.EDU'
 ,p_internal_uid=>3380740276891639700
 );
@@ -10485,7 +10497,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_db_column_name=>'NAME'
 ,p_display_order=>4
 ,p_column_identifier=>'D'
-,p_column_label=>'Name'
+,p_column_label=>'List Name'
 ,p_column_type=>'STRING'
 ,p_tz_dependent=>'N'
 );
@@ -10557,44 +10569,6 @@ wwv_flow_api.create_page_item(
 ,p_item_template_options=>'#DEFAULT#'
 ,p_attribute_01=>'Y'
 );
-wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(3381021157908737143)
-,p_name=>'CONTRACT_ALL'
-,p_event_sequence=>10
-,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_api.id(3381020458680737140)
-,p_bind_type=>'bind'
-,p_bind_event_type=>'click'
-);
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(3381021628544737143)
-,p_event_id=>wwv_flow_api.id(3381021157908737143)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_TREE_COLLAPSE'
-,p_affected_elements_type=>'REGION'
-,p_stop_execution_on_error=>'Y'
-);
-wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(3381022467520737144)
-,p_name=>'EXPAND_ALL'
-,p_event_sequence=>10
-,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_api.id(3381022064572737144)
-,p_bind_type=>'bind'
-,p_bind_event_type=>'click'
-);
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(3381022980402737144)
-,p_event_id=>wwv_flow_api.id(3381022467520737144)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_TREE_EXPAND'
-,p_affected_elements_type=>'REGION'
-,p_stop_execution_on_error=>'Y'
-);
 end;
 /
 prompt --application/pages/page_00019
@@ -10614,8 +10588,8 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
-,p_last_updated_by=>'nobody'
-,p_last_upd_yyyymmddhh24miss=>'20150427200519'
+,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20150429022119'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3649695709362356013)
@@ -10626,12 +10600,12 @@ wwv_flow_api.create_page_plug(
 ,p_include_in_reg_disp_sel_yn=>'N'
 ,p_plug_display_point=>'BODY'
 ,p_plug_source=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'select mls.ROWID, ',
-'ml1.name as "Parent List",',
-'ml2.name as "Child List"',
-'from MAILING_LIST_SUBLIST mls',
-'INNER JOIN MAILING_LIST ml1 ON mls.PARENT_MAILING_LIST_ID = ml1.LIST_ID',
-'INNER JOIN MAILING_LIST ml2 ON mls.CHILD_MAILING_LIST_ID = ml2.LIST_ID',
+'select s.ROWID, ',
+'nl1.name as "Parent List",',
+'nl2.name as "Child List"',
+'from SUBLIST s',
+'INNER JOIN NOTICE_LIST nl1 ON s.PARENT_LIST_ID = nl1.LIST_ID',
+'INNER JOIN NOTICE_LIST nl2 ON s.CHILD_LIST_ID = nl2.LIST_ID',
 ''))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_plug_query_row_template=>1
@@ -10722,9 +10696,9 @@ begin
 wwv_flow_api.create_page(
  p_id=>20
 ,p_user_interface_id=>wwv_flow_api.id(3088514766268159174)
-,p_name=>'Form on MAILING_LIST_SUBLIST'
+,p_name=>'Form on SUBLIST'
 ,p_page_mode=>'NORMAL'
-,p_step_title=>'Form on MAILING_LIST_SUBLIST'
+,p_step_title=>'Form on SUBLIST'
 ,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
 ,p_first_item=>'NO_FIRST_ITEM'
 ,p_javascript_code=>'var htmldb_delete_message=''"DELETE_CONFIRM_MSG"'';'
@@ -10737,11 +10711,11 @@ wwv_flow_api.create_page(
 ,p_cache_timeout_seconds=>21600
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429002721'
+,p_last_upd_yyyymmddhh24miss=>'20150429022604'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3649688526731355958)
-,p_plug_name=>'Form on MAILING_LIST_SUBLIST'
+,p_plug_name=>'Form on SUBLIST'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_plug_template=>wwv_flow_api.id(3088435719770156522)
 ,p_plug_display_sequence=>10
@@ -10839,20 +10813,20 @@ wwv_flow_api.create_page_item(
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(3649691772709356008)
-,p_name=>'P20_PARENT_MAILING_LIST_ID'
+,p_name=>'P20_PARENT_LIST_ID'
 ,p_is_required=>true
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_api.id(3649688526731355958)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Parent List'
-,p_source=>'PARENT_MAILING_LIST_ID'
+,p_source=>'PARENT_LIST_ID'
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'NOTICE_LIST_LIST'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'select name as d,',
 '       list_id as r',
-'  from mailing_list',
+'  from notice_list',
 ' order by 1'))
 ,p_lov_display_null=>'YES'
 ,p_lov_null_text=>'Select a List'
@@ -10867,27 +10841,27 @@ wwv_flow_api.create_page_item(
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(3649692159591356009)
-,p_name=>'P20_CHILD_MAILING_LIST_ID'
+,p_name=>'P20_CHILD_LIST_ID'
 ,p_is_required=>true
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_api.id(3649688526731355958)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Child List'
-,p_source=>'CHILD_MAILING_LIST_ID'
+,p_source=>'CHILD_LIST_ID'
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'P20_POSSIBLE_CHILD_LISTS'
 ,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'select name as d,',
 '       list_id as r',
-'  from mailing_list',
-'WHERE list_id != :P20_PARENT_MAILING_LIST_ID',
+'  from notice_list',
+'WHERE list_id != :P20_PARENT_LIST_ID',
 ' order by 1'))
 ,p_cSize=>32
 ,p_cMaxlength=>255
 ,p_cHeight=>1
 ,p_label_alignment=>'RIGHT'
-,p_display_when=>'P20_PARENT_MAILING_LIST_ID'
+,p_display_when=>'P20_PARENT_LIST_ID'
 ,p_display_when_type=>'ITEM_IS_NOT_NULL'
 ,p_field_template=>wwv_flow_api.id(3088483732006158577)
 ,p_item_template_options=>'#DEFAULT#'
@@ -10900,8 +10874,8 @@ wwv_flow_api.create_page_process(
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_HEADER'
 ,p_process_type=>'NATIVE_FORM_FETCH'
-,p_process_name=>'Fetch Row from MAILING_LIST_SUBLIST'
-,p_attribute_02=>'MAILING_LIST_SUBLIST'
+,p_process_name=>'Fetch Row from SUBLIST'
+,p_attribute_02=>'SUBLIST'
 ,p_attribute_03=>'P20_ROWID'
 ,p_attribute_04=>'ROWID'
 );
@@ -10910,8 +10884,8 @@ wwv_flow_api.create_page_process(
 ,p_process_sequence=>30
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_FORM_PROCESS'
-,p_process_name=>'Process Row of MAILING_LIST_SUBLIST'
-,p_attribute_02=>'MAILING_LIST_SUBLIST'
+,p_process_name=>'Process Row of SUBLIST'
+,p_attribute_02=>'SUBLIST'
 ,p_attribute_03=>'P20_ROWID'
 ,p_attribute_04=>'ROWID'
 ,p_attribute_11=>'I:U:D'
