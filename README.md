@@ -1,20 +1,4 @@
 #ARL Notification List Application
-
-##Pages
-
-###Login Page
-
-###Home Page
-
-###Divisions
-
-###Labs
-
-###Employees
-
-###List Membership
-
-<br>
 <br>
 
 ##How To Upload To Oracle Application Express
@@ -45,7 +29,3 @@ Uncompress the package and open the folder `CS347_final_project`.
 12. Click `Run Now`
 13. Repeat steps 11 and 12 for `ddl2.dll`, `ddl3.ddl`, and `seeds.sql`.
 14. You can now run the applicaiton in Apex.
-
-#Step-by-Step Implementation
-
-##Shuttle
