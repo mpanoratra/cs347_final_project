@@ -28,13 +28,14 @@ CREATE OR REPLACE PACKAGE types_package
 AS
   TYPE notice_list_tbl
     IS TABLE OF notice_list%ROWTYPE;
+  TYPE employee_tbl
+    IS TABLE OF employee%ROWTYPE;
 END;
 /
 create or replace procedure "GET_ALL_LISTS_FOR_EMPLOYEE"
 (PARAM_EMPLOYEE_ID IN NUMBER,
   all_lists OUT types_package.notice_list_tbl)
 IS
-  TYPE list_tbl IS TABLE OF notice_list%ROWTYPE;
   notice_lists1 types_package.notice_list_tbl;
   notice_lists2 types_package.notice_list_tbl;
 BEGIN
@@ -50,5 +51,30 @@ BEGIN
       CONNECT BY PRIOR s.parent_list_id = s.child_list_id
       START WITH s.child_list_id = notice_lists1(i).list_id;
    all_lists := all_lists MULTISET UNION notice_lists2;
+  END LOOP;
+END;
+/
+create or replace procedure "GET_ALL_LISTS_FOR_EMPLOYEE"
+(PARAM_LIST_ID IN NUMBER,
+  all_emps OUT types_package.employee_tbl)
+IS
+  notice_lists types_package.notice_list_tbl;
+  employees types_package.employee_tbl;
+  employees types_package.employee_tbl;
+BEGIN
+  SELECT nl2.* BULK COLLECT INTO notice_lists FROM sublist s
+      INNER JOIN notice_list nl2 ON s.parent_list_id = nl2.list_id
+      CONNECT BY PRIOR s.child_list_id = s.parent_list_id
+      START WITH s.parent_list_id = PARAM_LIST_ID;
+  SELECT e.* BULK COLLECT INTO all_emps FROM list_membership lm
+    INNER JOIN employee e ON lm.employee_id = e.employee_id
+    WHERE lm.notice_list_id = PARAM_LIST_ID;
+
+  all_lists := notice_lists1;
+  FOR i IN notice_lists.FIRST .. notice_lists.LAST LOOP
+    SELECT e.* BULK COLLECT INTO employees FROM list_membership lm
+      INNER JOIN employee e ON lm.employee_id = e.employee_id
+      WHERE lm.notice_list_id = notice_lists(i);
+   all_emps := all_emps MULTISET UNION employees;
   END LOOP;
 END;
