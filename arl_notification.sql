@@ -27,7 +27,7 @@ prompt APPLICATION 14305 - ARL_Notification_Lists
 -- Application Export:
 --   Application:     14305
 --   Name:            ARL_Notification_Lists
---   Date and Time:   17:51 Wednesday April 29, 2015
+--   Date and Time:   17:57 Wednesday April 29, 2015
 --   Exported By:     SMITHLEET@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -39,7 +39,7 @@ prompt APPLICATION 14305 - ARL_Notification_Lists
 --   Pages:                     26
 --     Items:                   51
 --     Processes:               42
---     Regions:                 36
+--     Regions:                 37
 --     Buttons:                 64
 --     Dynamic Actions:          7
 --   Shared Components:
@@ -110,7 +110,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429175108'
+,p_last_upd_yyyymmddhh24miss=>'20150429175628'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -10209,7 +10209,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'SMITHLEET@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20150429173403'
+,p_last_upd_yyyymmddhh24miss=>'20150429175628'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3847878106011615737)
@@ -10218,7 +10218,7 @@ wwv_flow_api.create_page_plug(
 ,p_escape_on_http_output=>'Y'
 ,p_plug_template=>wwv_flow_api.id(6936165697289752829)
 ,p_plug_display_sequence=>10
-,p_include_in_reg_disp_sel_yn=>'N'
+,p_include_in_reg_disp_sel_yn=>'Y'
 ,p_plug_display_point=>'BODY'
 ,p_plug_source=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'BEGIN ',
@@ -10244,7 +10244,7 @@ wwv_flow_api.create_page_plug(
 ,p_escape_on_http_output=>'Y'
 ,p_plug_template=>wwv_flow_api.id(6936165697289752829)
 ,p_plug_display_sequence=>20
-,p_include_in_reg_disp_sel_yn=>'N'
+,p_include_in_reg_disp_sel_yn=>'Y'
 ,p_plug_display_point=>'BODY'
 ,p_plug_source=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 'DECLARE',
@@ -10262,6 +10262,18 @@ wwv_flow_api.create_page_plug(
 ,p_plug_query_num_rows=>15
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
+,p_attribute_03=>'Y'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(3850596394685942375)
+,p_plug_name=>'Region Display Selector'
+,p_plug_display_sequence=>1
+,p_include_in_reg_disp_sel_yn=>'N'
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_DISPLAY_SELECTOR'
+,p_plug_query_row_template=>1
+,p_attribute_01=>'STANDARD'
+,p_attribute_02=>'Y'
 ,p_attribute_03=>'Y'
 );
 wwv_flow_api.create_page_item(
